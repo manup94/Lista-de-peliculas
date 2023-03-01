@@ -4,14 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineManuel</title>
+    <title>Cine Manuel</title>
     <script defer src="index.js"></script>
     <script  src="movies.colecion.js"></script>
 
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
- hola
+    <header>
+        <h1>Cine Manuel</h1>
+        <h2>Mejores peliculas de los ultimos 30 años</h2>
+    </header>
+    <section class="search-add-bar">
+        <button class="add-button" type="button">Añadir Pelicula nueva</button>
+        <div class="search-bar">
+            <input class="input-search" id="input-search" placeholder="Buscar una pelicula..." type="text">
+            <label for="input-search">
+                <button class="search-button" type="submit">
+                    <img class="lupa-icon" src="icons/lupa.png" alt="search">
+                </button>
+            </label>
+        </div>
+      
+    </section>
+    <section class="movies-list">
+        <template>
+            <div class="movie-container">
+                <h3 class="title">
+                    <span class="id"></span>
+                </h3>
+                <a href="#" class="link"></a>
+                <img src="#" alt="imagen de portada">
+            </div>
+            <p class="year"></p>
+            <p class="starring"></p>
+            <p class="directed-by"></p>
+        </template>
 
+    </section>
+   
 </body>
 </html>

@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background: #734B5E;
+    flex-direction: column;
+}
+header{
+    display: inline;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    background: #BCBDC0;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+   
+}
+.search-add-bar{
+    display: flex;
+    background: #565857;
+    text-align: center ;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    height: 40px;
+}
+.add-button{
+   width: 170px;
+   height: 30px;
+   border-radius: 10px;
+   
+}
+
+.search-bar{
+    display: flex;
+    margin: auto;
+}
+.input-search{
+    width: 350px;
+    height: 31px;
+    outline: none;
+}
+.lupa-icon{
+    height: 24px;
+}
+.movies-list{
+    background: #F5D3C8;
+    width: 90%;
+    display: flex;
+    margin: auto;
+    
+    
+}
