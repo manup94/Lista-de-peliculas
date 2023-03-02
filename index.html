@@ -13,7 +13,7 @@
 <body>
     <header>
         <h1>Cine Manuel</h1>
-        <h2>Mejores peliculas de los ultimos 30 años</h2>
+        <h2>Mejores peliculas del 2022</h2>
     </header>
     <section class="search-add-bar">
         <button class="add-button" type="button">Añadir Pelicula nueva</button>
@@ -27,6 +27,28 @@
         </div>
       
     </section>
+    <section id="add-movie" class="add-movie-hidden">
+        <div class="add-movie-container">
+            <form class="add-movie-form" action="#">
+                <input id="add-title" placeholder="Titulo de la pelicula" class="add-input" type="text">
+                <label for="add-title"></label>
+                <input id="add-link" placeholder="link en Rottentomatoes" class="add-input" type="url">
+                <label for="add-link"></label>
+                <input id="add-img" placeholder="Url de la img" class="add-input" type="url">
+                <label for="add-img"></label>
+                <input id="add-year" placeholder="Año de estreno" class="add-input" type="number">
+                <label for="add-year"></label>
+                <input id="add-starring" placeholder="Actores" class="add-input" type="text">
+                <label for="add-starring"></label>
+                <input id="add-directed-by" placeholder="Dirección por" class="add-input" type="text">
+                <label for="add-directed-by"></label>
+                <button id="submit-button" class="submit-button" type="submit">
+                    <img class="add-icon" src="icons/plus.png" alt="add-icon">
+                </button>
+
+            </form>
+        </div>
+    </section>
     <section class="movies-list">
         <template>
             <div class="movie-container">
@@ -34,7 +56,7 @@
                     <span class="id"></span>
                     <span class="title"></span>
                 </h3>
-                <a href="#" class="link">ver en Rottentomattoes</a>
+                <a href="#" class="link">ver en Rottentomatoes</a>
                 <img class="img" src="#" alt="imagen de portada">
                 <p class="year"></p>
                 <p class="starring"></p>

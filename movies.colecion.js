@@ -1,4 +1,4 @@
-const movies = [
+let movies = [
   {
     "id": 1,
     "title": "Glass Onion: A Knives Out Mystery",

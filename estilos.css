@@ -54,6 +54,111 @@ header{
     width: 90%;
     display: flex;
     margin: auto;
+    flex-wrap: wrap;
     
     
+}
+.movie-container{
+    display: flex;
+    width: 31%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #8A8D91;
+   border-radius: 2%;
+   background: #F5F3C9;
+}
+.title-container{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.id{
+    margin: 20px;
+}
+.link{
+    width: 100%;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #734B5E;
+}
+.img{
+    
+    width: 80%;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.year{
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    font-weight: bolder;
+}
+.starring{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px;
+}
+.directed-by{
+    font-weight: bolder;
+}
+
+/* //////////////////////MENU PARA AÑADIR PELICULA///////////////////// */
+
+.add-movie-hidden{
+    display: none;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+   
+    padding: 20px;
+}
+.add-movie{
+    display: flex;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin:  auto;
+   
+    padding: 20px;
+}
+.add-movie-container{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    background: #bacec4;
+}
+.add-input{
+    width: 30%;
+    margin: 10px;
+    outline: none;
+    height: 30px;
+    padding: 5px;
+}
+.submit-button{
+   height: 50px;
+   padding: 2px;
+   
+}
+.add-icon{
+    
+    height: 40px;
+    padding: 2px;
 }
