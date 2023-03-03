@@ -3,6 +3,7 @@
 const addMovieButton = document.querySelector('.add-button');
 let searchBar = document.querySelector('.input-search');
 const searchBarButton = document.querySelector('.search-button');
+
 // DE LA LISTA DE MOVIES////////////
 let movieListContainer = document.querySelector('.movies-list');
 const template = document.querySelector('template');
@@ -15,7 +16,9 @@ let img = movieContainer.querySelector('.img');
 let year = movieContainer.querySelector('.year');
 let starring = movieContainer.querySelector('.starring');
 let directedBy = movieContainer.querySelector('.directed-by');
+
 /// DEL FORMULARIO DE AÑADIR MOVIE/////////////
+let form = document.querySelector('.add-movie-form');
 let section = document.querySelector('#add-movie');
 let addTitle = document.querySelector('#add-title');
 let addLink = document.querySelector('#add-link');
@@ -66,77 +69,74 @@ function openAddMovie() {
 
 function submitForm() {
     
+    arrayPush();
+    movieListContainer.innerHTML = '';
+    addMovieList();
+    form.reset();
+}
+
+function arrayPush() {
     movies.push({
-        id: movies.length + 1 ,
-        title: addTitle.value ,
-        url: addLink.value ,
-        img: addimg.value ,
-        year: addYear.value ,
-        starring: addStarring.value ,
-        directedBy: addDirectedBy.value
-    
-    })
-    
-    createNewMovie()
-    addLastMovie(movies);
-    
-    console.log(movies);
-    
-
-    
-   
-   
-    
+            id: movies.length + 1 ,
+             title: addTitle.value ,
+             url: addLink.value ,
+             img: addimg.value ,
+             year: addYear.value ,
+             starring: addStarring.value ,
+             directedBy: addDirectedBy.value
+        
+         })
 }
 
-function createNewMovie() {
-    let newMovieContainer = document.createElement('div');
-    let title = document.createElement('h3');
-    let id = document.createElement('span');
-    let link = document.createElement('a');
-    let img = document.createElement('img');
-    let year = document.createElement('p');
-    let starring = document.createElement('p');
-    let directedBy = document.createElement('p');
+///////////////// BUSCAR PELICULA/////////////////
 
-    newMovieContainer.append(title,link,img,year,starring,directedBy);
-    title.append(id);
-    movieListContainer.append(movieContainer);
-
+function search() {
+    // filter()
+    searchMovie()
 }
 
-
-function addLastMovie(movies) {
+const searchMovie = (title) => {
    
-    movies.forEach(movie => {
-        if (movie.id < movies.length + 1) {
-           
-            console.log('hola');
-            title.textContent = movie.title;
-            id.textContent = movies.length ;
-            link.href = movie.url;
-            img.src = movie.img;
-            year.textContent = movie.year;
-            starring.textContent = movie.starring;
-            directedBy.textContent = movie.directedBy;
-            
-            
-        }   
-    });
+    for (let i = 0; i < movies.length; i++) {
+      movies[i].title = movies[i].title.toLowerCase();
+      if (movies[i].title.includes(title)) {
+        console.log(movies[i]);
+        return movies[i];
+       
+      }
+    }
+    return null;
+  };
+
+
+
+
+// function search() {
+//    movies.forEach(movie => {
+//     if (searchBar.value == movie.title ) {
+//         console.log('encontrado');
+//         movieListContainer.innerHTML = '';
+//         addData(movie);
+//         createMovie()
+//     } else if (!searchBar.value){
+//         movieListContainer.innerHTML = '';
+//         addMovieList();
+//     }
     
+//    }); 
 
 
-}
 
 
 
+// }
 
 
 
 ///////////////EVENTOSS////////////////////////
 addMovieButton.addEventListener('click',openAddMovie);
 addButton.addEventListener('click',submitForm);
-
+searchBarButton.addEventListener('click',search);
 
 
 
