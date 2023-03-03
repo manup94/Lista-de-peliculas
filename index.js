@@ -90,46 +90,31 @@ function arrayPush() {
 
 ///////////////// BUSCAR PELICULA/////////////////
 
+
+
+
+
+
+
 function search() {
-    // filter()
-    searchMovie()
-}
-
-const searchMovie = (title) => {
-   
-    for (let i = 0; i < movies.length; i++) {
-      movies[i].title = movies[i].title.toLowerCase();
-      if (movies[i].title.includes(title)) {
-        console.log(movies[i]);
-        return movies[i];
-       
-      }
+   movies.forEach(movie => {
+    if (searchBar.value == movie.title.toLowerCase() ) {
+        console.log('encontrado');
+        movieListContainer.innerHTML = '';
+        addData(movie);
+        createMovie()
+    } else if (!searchBar.value){
+        movieListContainer.innerHTML = '';
+        addMovieList();
     }
-    return null;
-  };
-
-
-
-
-// function search() {
-//    movies.forEach(movie => {
-//     if (searchBar.value == movie.title ) {
-//         console.log('encontrado');
-//         movieListContainer.innerHTML = '';
-//         addData(movie);
-//         createMovie()
-//     } else if (!searchBar.value){
-//         movieListContainer.innerHTML = '';
-//         addMovieList();
-//     }
     
-//    }); 
+   }); 
 
 
 
 
 
-// }
+}
 
 
 
