@@ -107,13 +107,6 @@ function search() {
 
 }
 
-///////////////// LINKEAR A OTRA WEB//////////
-
-function redirection(params) {
-   console.log('hola');
-
-   
-}
 
 ///////////////EVENTOSS////////////////////////
 addMovieButton.addEventListener('click',openAddMovie);
