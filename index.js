@@ -1,4 +1,5 @@
 ///////SELECTORES///////////////////////
+
 //  DEL HEADER////////////
 const addMovieButton = document.querySelector('.add-button');
 let searchBar = document.querySelector('.input-search');
@@ -7,7 +8,7 @@ const searchBarButton = document.querySelector('.search-button');
 // DE LA LISTA DE MOVIES////////////
 let movieListContainer = document.querySelector('.movies-list');
 const template = document.querySelector('template');
-const movieContainer = template.content.querySelector('.movie-container');
+let movieContainer = template.content.querySelector('.movie-container');
 let titleContainer = movieContainer.querySelector('.title-container');
 let title = titleContainer.querySelector('.title')
 let id = titleContainer.querySelector('.id');
@@ -90,12 +91,6 @@ function arrayPush() {
 
 ///////////////// BUSCAR PELICULA/////////////////
 
-
-
-
-
-
-
 function search() {
    movies.forEach(movie => {
     if (searchBar.value == movie.title.toLowerCase() ) {
@@ -110,13 +105,15 @@ function search() {
     
    }); 
 
-
-
-
-
 }
 
+///////////////// LINKEAR A OTRA WEB//////////
 
+function redirection(params) {
+   console.log('hola');
+
+   
+}
 
 ///////////////EVENTOSS////////////////////////
 addMovieButton.addEventListener('click',openAddMovie);
