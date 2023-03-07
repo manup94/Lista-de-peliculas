@@ -1,0 +1,16 @@
+Top de películas actuales (o al menos eso dicen)
+Nos han encargado un top de películas actuales (o al menos eso dicen) para una aplicación de cine, lo bueno es que al menos nos han dado un JSON con los datos de las películas y no tenemos que buscarlos nosotros.
+
+La aplicación debe permitir como mínimo:
+
+ 1 Mostrar un listado de películas ✅
+ 2 Añadir una película ✅
+ 3 Buscar una película por título ✅
+ 4 Al hacer click en una película se redigirá a la página de la película en Rotten Tomatoes ❌
+ 
+ Completado 3 de los 4 requisitos, sobre el punto no completado, no pude acceder al elemento en el dom ya que se creaba a travez de un template
+ y de ninguna de las maneras pude conseguirlo.
+ 
+ Aun asi, muy contento de el resultado ya que es la primera vez que consigo manejar el DOM y eventos y hacer que funcione, 
+ voy viendo el progreso dia tras dia.
+ 
